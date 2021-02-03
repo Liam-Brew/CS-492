@@ -38,6 +38,8 @@ Other components of a computer are:
 
 ## OS as an Extended Machine
 
+![extended_machine](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/extended_machine.PNG)
+
 OSs use **abstraction** (removal of unimportant details to reduce complexity) by creating object hierarchies wherein subservient operations are combined into a single operation at a higher level, hiding details and making the operation easier to use
 
 OSs use **virtualization** (simulating upgraded copies of a real object) to create virtual CPUs, memory, I/O, and other devices to facilitate the work of programmers and users
