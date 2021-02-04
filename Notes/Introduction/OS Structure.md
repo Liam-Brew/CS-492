@@ -24,7 +24,7 @@ There are two different options for the CPU mode indicated by the kernel mode bi
 1. **kernel mode**: both privileged and non-privileged instructions may be used
 2. **user mode**: only non-privileged instructions may be used
 
-![structure](/notes/assets/introduction/structure.PNG)
+![structure](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/structure.PNG)
 
 ## The Shell
 
@@ -43,7 +43,7 @@ There are two different options for the CPU mode indicated by the kernel mode bi
 
 ### Execution of a System Call
 
-![supervisor_call](/notes/assets/introduction/supervisor_call.PNG)
+![supervisor_call](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/supervisor_call.PNG)
 
 1. application, running in user mode, executes a system call S() to request a service from the OS
 2. execution transfers to the library function S(), still in user mode
@@ -65,7 +65,7 @@ There are two different options for the CPU mode indicated by the kernel mode bi
 
 ### Processing of an Interrupt
 
-![interrupt](/notes/assets/introduction/interrupt.PNG)
+![interrupt](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/interrupt.PNG)
 
 1. application 1 issues a system call S() requesting an I/O operation
 2. library function S() invokes the corresponding kernel function using a supervisor call k
@@ -81,7 +81,7 @@ There are two different options for the CPU mode indicated by the kernel mode bi
 
 ### Interrupt Example
 
-![interrupt](/notes/assets/introduction/interrupt_example.PNG)
+![interrupt](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/interrupt_example.PNG)
 
 1. **instruction i**: application 1 is currently running and continues until the first interrupt occurs following instruction i
 2. **instruction 0**: execution switches to application 2, which starts with instruction 0
