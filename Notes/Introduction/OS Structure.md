@@ -5,6 +5,10 @@
 - [OS Structure](#os-structure)
   - [Table of Contents](#table-of-contents)
   - [Hierarchical Structure](#hierarchical-structure)
+  - [Processes](#processes)
+  - [Address Space](#address-space)
+  - [Files](#files)
+    - [Special Files](#special-files)
   - [The Shell](#the-shell)
   - [System Calls and Supervisor Calls](#system-calls-and-supervisor-calls)
     - [Execution of a System Call](#execution-of-a-system-call)
@@ -26,6 +30,45 @@ There are two different options for the CPU mode indicated by the kernel mode bi
 
 ![structure](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/structure.PNG)
 
+## Processes
+
+A program uses resources in its execution (ex: CPU, memory)
+
+A program is only a series of instructions. As resources can't be allocated to that, an **instance** is required of a program in execution. This is a **process**
+
+Resources are allocated/accounted to processes during execution. Permissions are set on a process to control access and restrict sensitive data
+
+## Address Space
+
+Address space is how the OS manages the memory in a process. The entire address space both includes the kernel space and address spaceS
+
+A basic layout of address space is:
+
+- **stack**: active call data
+- **data**: program variables
+- **text**: program code
+
+![address_spaces](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/address_spaces.PNG)
+
+## Files
+
+A **file** is an abstraction of a region in a storage device (e.g. a disk)
+
+Files can be read from and written to by providing a position and the amount of data to transfer
+
+Files are maintained in **directories**. A directory keeps an identifier for each file it contains and is a file itself
+
+### Special Files
+
+"Everything is a file": hardware devices are abstracted as files:
+
+- block special files: a disk: ```brw-rw---- 1 root root 8, 2 Dec 4 18:04 /dev/sda2```
+- character special files: a serial port: ```crw-rw---- 1 root root 4, 64 Dec 4 18:04 /dev/ttyS0```
+- other special files:
+  - symbolic links
+  - named/anonymous FIFOs (sockets/pipes)
+  - everything is a file descriptor
+
 ## The Shell
 
 **graphical user interface (GUI)**: provides front-end interaction for the user. Preferred by basic users for its simplicity
@@ -34,7 +77,9 @@ There are two different options for the CPU mode indicated by the kernel mode bi
 
 ## System Calls and Supervisor Calls
 
-**system call**: request from an application for an OS service. May be implemented as a library function for organization of parameters and supervisor calls
+![system_calls](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/system_calls.PNG)
+
+**system call**: interface the OS offers to applications to issue service requests
 
 **supervisor call (kernel call)**: privileged instruction that automatically transfers execution control to the kernel. Interfaces the kernel with higher-level software. Similar to a function call with two special features:
 
