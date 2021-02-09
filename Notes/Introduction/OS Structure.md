@@ -5,7 +5,11 @@
 - [OS Structure](#os-structure)
   - [Table of Contents](#table-of-contents)
   - [Hierarchical Structure](#hierarchical-structure)
+    - [Monolithic OS](#monolithic-os)
+    - [Microkernel OS](#microkernel-os)
+    - [Virtual Machines/Hypervisors](#virtual-machineshypervisors)
   - [Processes](#processes)
+    - [Memory](#memory)
   - [Address Space](#address-space)
   - [Files](#files)
     - [Special Files](#special-files)
@@ -30,6 +34,29 @@ There are two different options for the CPU mode indicated by the kernel mode bi
 
 ![structure](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/structure.PNG)
 
+### Monolithic OS
+
+The entire OS runs as a single program in kernel mode. This is a collection of procedures linked together into a single large executable binary:
+
+- every function can call the other
+- very high performance
+- crash affects everything
+- hard to understand
+
+![monolithic](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/monolithic.PNG)
+
+### Microkernel OS
+
+Splits the OS up into small, well-defined modules. Only one module runs in kernel mode (the microkernel). The rest run as relatively powerless ordinary suer processes (a bug cannot crash the entire system)
+
+![microkernel](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/microkernel.PNG)
+
+### Virtual Machines/Hypervisors
+
+These are not OSs themselves. They interface with the hardware (below) and provide a hardware interface (above). They run OSs (Linux, Windows, BSD etc.) and unikernels ("libOS", cf.exokernel)
+
+![hypervisor](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/hypervisor.PNG)
+
 ## Processes
 
 A program uses resources in its execution (ex: CPU, memory)
@@ -37,6 +64,10 @@ A program uses resources in its execution (ex: CPU, memory)
 A program is only a series of instructions. As resources can't be allocated to that, an **instance** is required of a program in execution. This is a **process**
 
 Resources are allocated/accounted to processes during execution. Permissions are set on a process to control access and restrict sensitive data
+
+### Memory
+
+![memory](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/memory.PNG)
 
 ## Address Space
 
