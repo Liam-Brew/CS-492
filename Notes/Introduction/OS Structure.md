@@ -9,7 +9,6 @@
     - [Microkernel OS](#microkernel-os)
     - [Virtual Machines/Hypervisors](#virtual-machineshypervisors)
   - [Processes](#processes)
-    - [Memory](#memory)
   - [Address Space](#address-space)
   - [Files](#files)
     - [Special Files](#special-files)
@@ -64,10 +63,6 @@ A program uses resources in its execution (ex: CPU, memory)
 A program is only a series of instructions. As resources can't be allocated to that, an **instance** is required of a program in execution. This is a **process**
 
 Resources are allocated/accounted to processes during execution. Permissions are set on a process to control access and restrict sensitive data
-
-### Memory
-
-![memory](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/memory.PNG)
 
 ## Address Space
 
