@@ -19,13 +19,13 @@ A **process control block (PCB)** is a data structure that holds information for
 - resources used by the process
 - program being executed
 
-![pcb](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/ptr/pcb.PNG)
+![pcb](/notes/assets/ptr/pcb.PNG)
 
 ## Process States and Transitions
 
 ### Basic States
 
-![basic_states](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/ptr/basic_states.PNG)
+![basic_states](/notes/assets/ptr/basic_states.PNG)
 
 The following three basic states exist for most OSs:
 
@@ -35,7 +35,7 @@ The following three basic states exist for most OSs:
 
 ### Extra States
 
-![other_states](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/ptr/other_states.PNG)
+![other_states](/notes/assets/ptr/other_states.PNG)
 
 There are additional process states that may include the following:
 
@@ -49,7 +49,7 @@ A **context switch** is the transfer of control from one process to another. Whe
 
 The **CPU state** consists of all intermediate values held in CPU registers and hardware flags at the time of interruption
 
-![context_switch](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/ptr/context_switch.PNG)
+![context_switch](/notes/assets/ptr/context_switch.PNG)
 
 ### State Transitions
 

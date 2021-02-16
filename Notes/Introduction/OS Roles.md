@@ -38,7 +38,7 @@ Other components of a computer are:
 
 ## OS as an Extended Machine
 
-![extended_machine](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/extended_machine.PNG)
+![extended_machine](/notes/assets/introduction/extended_machine.PNG)
 
 OSs use **abstraction** (removal of unimportant details to reduce complexity) by creating object hierarchies wherein subservient operations are combined into a single operation at a higher level, hiding details and making the operation easier to use
 
@@ -50,7 +50,7 @@ One of an OS's main tasks is to optimize the use of computational resources to b
 
 ### Multiprogramming
 
-![multiprogramming](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/multiprogramming.PNG)
+![multiprogramming](/notes/assets/introduction/multiprogramming.PNG)
 
 **multiprogramming**: several programs are simultaneously active in memory, with execution being switched to maximize resource usage. When a program enters I/O or another phase wherein little CPU power is needed, other programs may instead resume and utilize the CPU in the meantime. Likewise, when an operation is completed, the OS activates computations that can now utilize the device
 
@@ -59,7 +59,7 @@ One of an OS's main tasks is to optimize the use of computational resources to b
 
 ### Time-sharing
 
-![time_sharing](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/time_sharing.PNG)
+![time_sharing](/notes/assets/introduction/time_sharing.PNG)
 
 **time-sharing (multitasking)**: extension of multiprogramming wherein the CPU is periodically switched among active computations to share resources among each user. Virtualizes a separate CPU for each computation
 
@@ -69,7 +69,7 @@ One of an OS's main tasks is to optimize the use of computational resources to b
 
 ### Multiprogramming 1
 
-![multiprogramming_example1](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/multiprogramming_example1.PNG)
+![multiprogramming_example1](/notes/assets/introduction/multiprogramming_example1.PNG)
 
 **Without multiprogramming**: both phases are sequential since only 1 I/O device can be used
 
@@ -89,7 +89,7 @@ Therefore, the total time is 30 + 40 + 80 = **150 units**
 
 ### Multiprogramming 2
 
-![multiprogramming_example2](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/multiprogramming_example2.PNG)
+![multiprogramming_example2](/notes/assets/introduction/multiprogramming_example2.PNG)
 
 > p1 runs from 0 to 40, followed by the I/O phase from 40 to 120. Thus, the I/O device is idle for 40 units (0 to 40)
 >
@@ -101,11 +101,11 @@ Therefore, the total time is 30 + 40 + 80 = **150 units**
 
 Therefore, the I/O device is idle for only the initial **40 units**. The CPU is idle for 40 + 40 + 40 + 80 = **200 units**
 
-![multiprogramming_example2_chart](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/multiprogramming_example2_chart.PNG)
+![multiprogramming_example2_chart](/notes/assets/introduction/multiprogramming_example2_chart.PNG)
 
 ### Time-sharing 1
 
-![time_sharing_example](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/time_sharing_example.PNG)
+![time_sharing_example](/notes/assets/introduction/time_sharing_example.PNG)
 
 > Both processes run concurrently but at half the speed, meaning a processing phase of 1200 units
 >

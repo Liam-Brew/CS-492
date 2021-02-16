@@ -136,7 +136,7 @@ Files are maintained in **directories**. A directory keeps an identifier for eac
 
 ### Processing of an Interrupt
 
-![interrupt](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/interrupt.PNG)
+![interrupt](/notes/assets/introduction/interrupt.PNG)
 
 1. application 1 issues a system call S() requesting an I/O operation
 2. library function S() invokes the corresponding kernel function using a supervisor call k
@@ -152,7 +152,7 @@ Files are maintained in **directories**. A directory keeps an identifier for eac
 
 ### Interrupt Example
 
-![interrupt](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/interrupt_example.PNG)
+![interrupt](/notes/assets/introduction/interrupt_example.PNG)
 
 1. **instruction i**: application 1 is currently running and continues until the first interrupt occurs following instruction i
 2. **instruction 0**: execution switches to application 2, which starts with instruction 0

@@ -11,9 +11,9 @@
 
 ## Memory
 
-![memory](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/memory.PNG)
+![memory](/notes/assets/introduction/memory.PNG)
 
-![memory2](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/memory2.PNG)
+![memory2](/notes/assets/introduction/memory2.PNG)
 
 **cache**: temporarily holds a piece of data from a slower memory into a faster memory. There are hardware and software caches. Also an interface (when not transparent):
 
@@ -29,7 +29,7 @@ Questions when dealing with caches:
 - which item to remove from the cache when a slot is needed?
 - where to put a newly evicted item in the larger memory?
 
-![chips](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/chips.PNG)
+![chips](/notes/assets/introduction/chips.PNG)
 
 Advantages: shared memory (a), more independent tasks (b)
 
@@ -37,18 +37,18 @@ Advantages: shared memory (a), more independent tasks (b)
 
 Mechanical hard drive:
 
-![hdd](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/hdd.PNG)
+![hdd](/notes/assets/introduction/hdd.PNG)
 
 Solid state drive:
 
-![ssd](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/ssd.PNG)
+![ssd](/notes/assets/introduction/ssd.PNG)
 
 ## IO Devices
 
-![io](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/io.PNG)
+![io](/notes/assets/introduction/io.PNG)
 
 ## Buses
 
-![bus](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/bus.PNG)
+![bus](/notes/assets/introduction/bus.PNG)
 
-![bus2](https://github.com/Liam-Brew/CS-492/blob/master/Notes/assets/introduction/bus2.PNG)
+![bus2](/notes/assets/introduction/bus2.PNG)
