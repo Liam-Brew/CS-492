@@ -8,6 +8,7 @@
   - [Organizing PCBs](#organizing-pcbs)
     - [Avoiding Linked Lists](#avoiding-linked-lists)
   - [Managing PCBs](#managing-pcbs)
+  - [Creating New Processes](#creating-new-processes)
 
 ## Contents of the PCB
 
@@ -50,3 +51,16 @@ This method requires no dynamic memory management
 **waiting list**: associated with every resource. Contains all the processes that are blocked on that resource because the resource is not available
 
 **ready list**:  contains all processes that are in the ready state and thus are able to run on the CPU. Sorts processes by their importance, expressed by an integer value called the *priority*
+
+## Creating New Processes
+
+- *fork()*: creates a new process
+- *execve()*: installs a new program in the process
+
+Both *fork()* and *execve()* are system calls
+
+Process creation is done by the *clone()* system call
+
+- clone can create new processes or new threads
+- creates a new task (new process means that the address space is not shared)
+- Linux assigns PID based on clone's parameters

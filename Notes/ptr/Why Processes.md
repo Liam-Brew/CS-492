@@ -7,6 +7,9 @@
   - [Virtual CPUs](#virtual-cpus)
     - [Benefits](#benefits)
   - [Modular Structuring](#modular-structuring)
+    - [Multiprogramming Model](#multiprogramming-model)
+    - [Sequential Processes](#sequential-processes)
+    - [Time Sharing](#time-sharing)
 
 ## Virtual CPUs
 
@@ -35,3 +38,21 @@ An application can be divided into different processes, which holds several adva
 - each process can be designed and studied in isolation
 - implementation reduces idle time by overlapping the execution of multiple processes
 - different processes can utilize separate CPUs, if available, thus speeding up the execution
+
+### Multiprogramming Model
+
+Each program *A*, *B*, *C*, and *D* represents a unique process. They are being run on a single core/thread CPU:
+
+![multiprogramming_process](/notes/assets/ptr/multiprogramming_process.PNG)
+
+### Sequential Processes
+
+These processes are each being run concurrently on a different core and are able to communicate with each other. However, this provides wasting of CPU resources, such as when a process blocks for IO
+
+![sequential_processes](/notes/assets/ptr/sequential_processes.PNG)
+
+### Time Sharing
+
+These four processes run on a single core CPU and only one is active at once. However, the processes are run in a way that appears to be simultaneous. Process execution is switched when the current process blocks
+
+![time_sharing](/notes/assets/ptr/time_sharing.PNG)

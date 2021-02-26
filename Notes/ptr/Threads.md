@@ -7,6 +7,8 @@
   - [Thread Concept](#thread-concept)
   - [Thread Control Block](#thread-control-block)
   - [Combined User- and Kernel-level Threads](#combined-user--and-kernel-level-threads)
+  - [Threads vs. Processes](#threads-vs-processes)
+    - [POSIX Threads](#posix-threads)
 
 ## Thread Concept
 
@@ -43,3 +45,17 @@ Disadvantages of ULTs:
 A combined approach is supporting a small number of KLTs. ULTs are then mapped to KLTs based on their needs
 
 ![combined_threads](/notes/assets/ptr/combined_threads.PNG)
+
+## Threads vs. Processes
+
+The initialization of each process takes time, as each process requires its own PCB and therefore memory allocation
+
+Threads require a process to serve as a "container". One process may contain one or multiple threads. Therefore, many threads can be found within one process, requiring the overhead of only one PCB
+
+A thread is an independent sequential execution stream within a process. Programs use one or multiple threads per process
+
+![threads_vs_processes](/notes/assets/ptr/threads_vs_processes.PNG)
+
+### POSIX Threads
+
+![posix_threads](/notes/assets/ptr/posix_threads.PNG)

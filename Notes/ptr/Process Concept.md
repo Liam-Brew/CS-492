@@ -9,6 +9,8 @@
     - [Extra States](#extra-states)
   - [Context Switch](#context-switch)
     - [State Transitions](#state-transitions)
+  - [Process Key Components](#process-key-components)
+    - [Address Space/Memory](#address-spacememory)
 
 A **process** is an instance of a program being executed by an OS, with the OS itself being a collection of processes
 
@@ -61,3 +63,23 @@ The following state transitions are possible:
 - ready -> running (OS scheduler)
 - suspended -> ready (reactivate)
 - blocked -> ready
+
+## Process Key Components
+
+- address space/memory
+  - stack
+  - heap
+  - executable program
+    - initialized data segment (.data)
+    - text segment (.text)
+- execution context
+  - program counter (PC)
+  - stack pointer (SP)
+  - CPU registers
+- OS related resources (files ...)
+
+### Address Space/Memory
+
+![address_space](/notes/assets/ptr/address_space.PNG)
+
+Each process has its own exclusive address space. The content of a specific memory address is different in two different processes, and the operating system has its own exclusive address space
