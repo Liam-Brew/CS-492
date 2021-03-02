@@ -12,6 +12,8 @@
 
 ## Contents of the PCB
 
+The Process Table consists of multiple processes. Each entry is represented by a Process Control Block
+
 ![pcb_composition](/notes/assets/ptr/pcb_composition.PNG)
 
 The PCB is the instantiation of a process. When a process is created, the OS assigns every process a unique identifier *p* that could be a pointer to a PCB structure or an index to an array of PCBs
