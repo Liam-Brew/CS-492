@@ -8,6 +8,10 @@
   - [Thread Control Block](#thread-control-block)
     - [Why use the TCB?](#why-use-the-tcb)
   - [Combined User- and Kernel-level Threads](#combined-user--and-kernel-level-threads)
+  - [Context Switching Threads](#context-switching-threads)
+  - [Making Single-threaded Code Multi-threaded](#making-single-threaded-code-multi-threaded)
+  - [Threads in Linux](#threads-in-linux)
+    - [task_struct](#task_struct)
   - [Threads vs. Processes](#threads-vs-processes)
     - [Benefits of Threads](#benefits-of-threads)
     - [POSIX Threads](#posix-threads)
@@ -66,6 +70,41 @@ Advantages of KLTs:
 A combined approach is supporting a small number of KLTs. ULTs are then mapped to KLTs based on their needs
 
 ![combined_threads](/notes/assets/ptr/combined_threads.PNG)
+
+## Context Switching Threads
+
+Threads can also be the unit of a context switch, with the scheduler queues now containing pointers to TCBs
+
+The context switch causes the CPU state to be copied to/from the TCB
+
+## Making Single-threaded Code Multi-threaded
+
+Race conditions are a threat in single-threaded code. To avoid this, either avoid global variables or make it so that each thread has its own global variables
+
+**thread-local storage (TLS)**: storage specific to a certain thread
+
+```c
+#include <threads.h>
+
+thread_local int foo = 0;
+```
+
+## Threads in Linux
+
+Threads are implemented in the kernel space, with process and thread tables in the kernel
+
+Linux uniformly handles processes and threads. Processes and thread tables are unified into a single data structure, with the same applying to PCBs and TCBs
+
+Processes and threads are **tasks**, with the same ```task_struct``` represents either a process or a thread
+
+- a single-threaded process has one ```task_struct```
+- a multi-threaded process has one ```task_struct``` per thread
+
+### task_struct
+
+Kernel code can refer to the current task by using the macro ```current```, defined in ```<asm/current.h>```. This yields a pointer to ```struct task_struct```
+
+The current pointer refers to the task that is currently executing in user space
 
 ## Threads vs. Processes
 
